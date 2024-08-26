@@ -13,3 +13,26 @@ applications:
       sources:
       - path: helm-charts/charts/config-test-2
         clusterRepoValuesPath: components/configs/config-test-2/values.yaml
+
+clustergenerators:
+
+  - name: hmo-test-manager
+    environments:
+    - 'frdev' 
+    - 'frxxx'
+    project: default 
+    destination: 
+      namespace: openshift-gitops  
+    applications:
+    - name: hmo-test-1
+      destination: default
+      sources:
+      - path: helm-charts/charts/hmo-test-config
+        clusterRepoValuesPath: components/configs/hmo-test-config/values.yaml
+        targetRevision:  main
+    - name: hmo-test-2
+      destination: default
+      sources:
+      - path: helm-charts/charts/hmo-test-config
+        clusterRepoValuesPath: components/configs/hmo-test-config/values.yaml
+        targetRevision:  main
