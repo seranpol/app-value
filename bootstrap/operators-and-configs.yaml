@@ -1,0 +1,8 @@
+applications:
+
+    - name: config-provider
+      annotations:
+        argocd.argoproj.io/sync-wave: "4"
+      sources:
+      - path: helm-charts/charts/config-test
+        clusterRepoValuesPath: components/configs/config-test/values.yaml
