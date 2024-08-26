@@ -32,6 +32,6 @@ clustergenerators:
     - name: hmo-test-2
       destination: default
       sources:
-      - path: helm-charts/charts/hmo-test-config
+      - path: helm-charts/charts/clustergen-test
         clusterRepoValuesPath: components/configs/clustergen-test-2/values.yaml
         targetRevision:  main
