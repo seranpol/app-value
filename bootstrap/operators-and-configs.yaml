@@ -23,7 +23,7 @@ clustergenerators:
     project: default 
     destination: 
       namespace: openshift-gitops  
-    applications:
+    generatorApplications:
     - name: hmo-test-1
       destination: default
       sources:
