@@ -18,7 +18,6 @@ clustergenerators:
 
   - name: hmo-test-manager
     environments:
-    - 'dev' 
     - 'something'
     project: default 
     destination: 
