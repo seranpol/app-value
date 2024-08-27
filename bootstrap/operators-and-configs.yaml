@@ -18,6 +18,7 @@ clustergenerators:
 
   - name: hmo-test-manager
     environments:
+    - 'dev'
     - 'foobar'
     project: default 
     destination: 
