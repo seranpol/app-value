@@ -1,13 +1,13 @@
 applications:
 
-    - name: config-provider-1
+    - name: my-normal-application-1
       annotations:
         argocd.argoproj.io/sync-wave: "4"
       sources:
       - path: helm-charts/charts/config-test-1
         clusterRepoValuesPath: components/configs/config-test-1/values.yaml
 
-    - name: config-provider-2
+    - name: my-normal-application-2
       annotations:
         argocd.argoproj.io/sync-wave: "4"
       sources:
