@@ -1,6 +1,8 @@
 applications:
 
     - name: my-normal-application-1
+      destination:
+        namespace: hmo-test
       annotations:
         argocd.argoproj.io/sync-wave: "4"
       sources:
