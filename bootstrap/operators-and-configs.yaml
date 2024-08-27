@@ -32,7 +32,7 @@ clustergenerators:
         clusterRepoValuesPath: components/configs/clustergen-test-1/values.yaml
         targetRevision:  main
     - name: hmo-test-2
-      destination: foobar
+      destination: default
       project: generator-test-project
       sources:
       - path: helm-charts/charts/clustergen-test
