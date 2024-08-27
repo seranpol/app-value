@@ -1,7 +1,7 @@
 applications:
 
     - name: my-normal-application-1
-      project: default
+      project: generator-test-project
       destination:
         namespace: hmo-test
       annotations:
