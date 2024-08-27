@@ -18,7 +18,7 @@ clustergenerators:
 
   - name: hmo-test-manager
     environments:
-    - 'something'
+    - 'dev'
     project: default 
     destination: 
       namespace: openshift-gitops  
