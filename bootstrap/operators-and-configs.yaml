@@ -20,7 +20,7 @@ clustergenerators:
     environments:
     - 'dev'
     - 'foobar'
-    # argoProject: generator-test-project 
+    argoProject: generator-test-project 
     destination: 
       namespace: openshift-gitops  
     generatorApplications:
