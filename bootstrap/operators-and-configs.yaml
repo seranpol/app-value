@@ -1,7 +1,7 @@
 applications:
 
     - name: my-normal-application-1
-      project: generator-test-project
+      project: default
       destination:
         namespace: hmo-test
       annotations:
@@ -10,13 +10,13 @@ applications:
       - path: helm-charts/charts/config-test-1
         clusterRepoValuesPath: components/configs/config-test-1/values.yaml
 
-    - name: my-normal-application-2
-      project: generator-test-project
-      annotations:
-        argocd.argoproj.io/sync-wave: "4"
-      sources:
-      - path: helm-charts/charts/config-test-2
-        clusterRepoValuesPath: components/configs/config-test-2/values.yaml
+    # - name: my-normal-application-2
+    #   project: generator-test-project
+    #   annotations:
+    #     argocd.argoproj.io/sync-wave: "4"
+    #   sources:
+    #   - path: helm-charts/charts/config-test-2
+    #     clusterRepoValuesPath: components/configs/config-test-2/values.yaml
 
 clustergenerators:
 
