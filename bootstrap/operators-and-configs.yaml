@@ -23,8 +23,9 @@ clustergenerators:
   - name: hmo-test-manager
     environments:
     - 'dev'
-    - 'foobar'
+    - 'foobar'    
     argoProject: generator-test-project 
+    namespace: hmo-test-clustergen  
     destination: 
       namespace: hmo-test-clustergen  
     generatorApplications:
