@@ -24,7 +24,7 @@ clustergenerators:
   # the name of the new app-of-apps application that is generated from the clustergenerator
   - name: hmo-test-manager2
     destination:
-      namespace: default
+      namespace: openshift-gitops
     environments:
     - 'dev'
     - 'foobar'    
