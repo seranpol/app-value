@@ -28,10 +28,12 @@ clustergenerators:
     environments:
     - 'dev'
     - 'foobar'    
-    argoProject: generator-test-project 
+    project: generator-test-project 
     generatorApplications:
     - name: hmo-test-1
       project: generator-test-project
+      destination:
+        namespace: hmo-test
       sources:
       - path: helm-charts/charts/clustergen-test
         clusterRepoValuesPath: components/configs/clustergen-test-1/values.yaml
