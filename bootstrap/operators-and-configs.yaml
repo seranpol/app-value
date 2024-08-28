@@ -18,9 +18,13 @@ applications:
       - path: helm-charts/charts/config-test-2
         clusterRepoValuesPath: components/configs/config-test-2/values.yaml
 
-clustergenerators:
 
+# [cluster-config-manager -> applicationset -> application -> many-applications]
+clustergenerators:
+  # the name of the new app-of-apps application that is generated from the clustergenerator
   - name: hmo-test-manager2
+    destination:
+      namespace: default
     environments:
     - 'dev'
     - 'foobar'    
