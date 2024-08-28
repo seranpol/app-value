@@ -26,7 +26,7 @@ clustergenerators:
     - 'foobar'
     argoProject: generator-test-project 
     destination: 
-      namespace: openshift-gitops  
+      namespace: hmo-test-clustergen  
     generatorApplications:
     - name: hmo-test-1
       project: generator-test-project
