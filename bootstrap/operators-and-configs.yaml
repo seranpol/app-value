@@ -30,7 +30,6 @@ clustergenerators:
     generatorApplications:
     - name: hmo-test-1
       project: generator-test-project
-      destination: default
       sources:
       - path: helm-charts/charts/clustergen-test
         clusterRepoValuesPath: components/configs/clustergen-test-1/values.yaml
