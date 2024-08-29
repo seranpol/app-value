@@ -1,3 +1,17 @@
+projects:
+  - name: wiz
+    description: ArgoCD Project for wiz security components
+    namespace: openshift-gitops
+    destinations:
+      - namespace: 'wiz'
+        server: https://kubernetes.default.svc
+      - namespace: 'openshift-gitops'
+        server: https://kubernetes.default.svc
+    clusterResourceWhitelist:
+      - group: '*'
+        kind: '*'
+
+
 applications:
 
     - name: my-normal-application-1
@@ -20,7 +34,16 @@ applications:
 
 
 # [cluster-config-manager -> applicationset -> application -> many-applications]
-clustergenerators:
+# clustergenerators:
+#   - name: wiz-look-alike
+#     enviroments:
+#     - 'dev'
+#     destination:
+#       namespace: cluster-generator-ns
+
+
+
+
   # the name of the new app-of-apps application that is generated from the clustergenerator
   - name: hmo-test-manager1
     environments:
