@@ -46,7 +46,8 @@ clustergenerators:
       namespace: cluster-generator-ns
     generatorApplications: 
     - name: hmo-test-2
-      destination: default
+      destination:
+        namespace: generator-application-ns
       project: generator-test-project
       sources:
       - path: helm-charts/charts/clustergen-test
