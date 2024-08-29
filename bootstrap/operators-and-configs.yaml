@@ -25,7 +25,6 @@ clustergenerators:
   - name: hmo-test-manager1
     environments:
     - 'dev'
-    - 'foobar'    
     project: generator-test-project
     destination:
       namespace: cluster-generator-ns
@@ -42,7 +41,6 @@ clustergenerators:
   - name: hmo-test-manager2
     environments:
     - 'dev'
-    - 'foobar'    
     project: generator-test-project
     destination:
       namespace: cluster-generator-ns
