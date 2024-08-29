@@ -38,10 +38,19 @@ clustergenerators:
       - path: helm-charts/charts/clustergen-test
         clusterRepoValuesPath: components/configs/clustergen-test-1/values.yaml
         targetRevision:  main
-  #   - name: hmo-test-2
-  #     destination: default
-  #     project: generator-test-project
-  #     sources:
-  #     - path: helm-charts/charts/clustergen-test
-  #       clusterRepoValuesPath: components/configs/clustergen-test-2/values.yaml
-  #       targetRevision:  main
+
+  - name: hmo-test-manager2
+    environments:
+    - 'dev'
+    - 'foobar'    
+    project: generator-test-project
+    destination:
+      namespace: cluster-generator-ns
+    generatorApplications: 
+    - name: hmo-test-2
+      destination: default
+      project: generator-test-project
+      sources:
+      - path: helm-charts/charts/clustergen-test
+        clusterRepoValuesPath: components/configs/clustergen-test-2/values.yaml
+        targetRevision:  main
