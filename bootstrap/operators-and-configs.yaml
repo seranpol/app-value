@@ -28,12 +28,12 @@ clustergenerators:
     - 'foobar'    
     project: generator-test-project
     destination:
-      namespace: does-not-exist
+      namespace: cluster-generator-ns
     generatorApplications:
     - name: hmo-test-1
       project: generator-test-project
       destination:
-        namespace: hmo-test
+        namespace: generator-application-ns
       sources:
       - path: helm-charts/charts/clustergen-test
         clusterRepoValuesPath: components/configs/clustergen-test-1/values.yaml
