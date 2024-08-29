@@ -26,7 +26,9 @@ clustergenerators:
     environments:
     - 'dev'
     - 'foobar'    
-    project: generator-test-project 
+    project: generator-test-project
+    destination:
+      namespace: does-not-exist
     generatorApplications:
     - name: hmo-test-1
       project: generator-test-project
