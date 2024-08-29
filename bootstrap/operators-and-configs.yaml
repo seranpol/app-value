@@ -1,15 +1,15 @@
 projects:
-  - name: wiz
-    description: ArgoCD Project for wiz security components
-    namespace: openshift-gitops
-    destinations:
-      - namespace: 'wiz'
-        server: https://kubernetes.default.svc
-      - namespace: 'openshift-gitops'
-        server: https://kubernetes.default.svc
-    clusterResourceWhitelist:
-      - group: '*'
-        kind: '*'
+  # - name: wiz
+  #   description: ArgoCD Project for wiz security components
+  #   namespace: openshift-gitops
+  #   destinations:
+  #     - namespace: 'wiz'
+  #       server: https://kubernetes.default.svc
+  #     - namespace: 'openshift-gitops'
+  #       server: https://kubernetes.default.svc
+  #   clusterResourceWhitelist:
+  #     - group: '*'
+  #       kind: '*'
 
 
 applications:
