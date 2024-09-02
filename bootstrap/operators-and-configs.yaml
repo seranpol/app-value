@@ -65,23 +65,23 @@ applications:
         clusterRepoValuesPath: components/configs/clustergen-test-1/values.yaml
         targetRevision:  main
 
-  - name: hmo-test-manager2
-    environments:
-    - 'dev'
-    #project: generator-test-project
-    project: default
-    destination:
-      #namespace: cluster-generator-ns
-      namespace: openshift-gitops
-    generatorApplications: 
-    - name: hmo-test-2
-      destination:
-        #namespace: generator-application-ns
-        #namespace: default
-        namespace: openshift-gitops
-      #project: generator-test-project
-      project: default
-      sources:
-      - path: helm-charts/charts/clustergen-test
-        clusterRepoValuesPath: components/configs/clustergen-test-2/values.yaml
-        targetRevision:  main
+  # - name: hmo-test-manager2
+  #   environments:
+  #   - 'dev'
+  #   #project: generator-test-project
+  #   project: default
+  #   destination:
+  #     #namespace: cluster-generator-ns
+  #     namespace: openshift-gitops
+  #   generatorApplications: 
+  #   - name: hmo-test-2
+  #     destination:
+  #       #namespace: generator-application-ns
+  #       #namespace: default
+  #       namespace: openshift-gitops
+  #     #project: generator-test-project
+  #     project: default
+  #     sources:
+  #     - path: helm-charts/charts/clustergen-test
+  #       clusterRepoValuesPath: components/configs/clustergen-test-2/values.yaml
+  #       targetRevision:  main
