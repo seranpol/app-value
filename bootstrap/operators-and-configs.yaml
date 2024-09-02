@@ -54,7 +54,8 @@ applications:
       namespace: cluster-generator-ns
     generatorApplications:
     - name: hmo-test-1
-      project: generator-test-project
+      #project: generator-test-project
+      project: default
       destination:
         namespace: generator-application-ns
       sources:
@@ -73,7 +74,8 @@ applications:
     - name: hmo-test-2
       destination:
         namespace: generator-application-ns
-      project: generator-test-project
+      #project: generator-test-project
+      project: default
       sources:
       - path: helm-charts/charts/clustergen-test
         clusterRepoValuesPath: components/configs/clustergen-test-2/values.yaml
