@@ -84,7 +84,7 @@ clustergenerators:
       project: default
       sources:
         - chartRepoPath: "https://github.com/seranpol/app-external.git"
-          chartName: .
+          chartName: app-external
           clusterRepoValuesPaths:
           - common-settings/wiz/wiz-sensor/values.yaml
           - components/configs/wiz/wiz-sensor/values.yaml
