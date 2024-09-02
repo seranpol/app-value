@@ -1,4 +1,4 @@
-projects:
+#projects:
   # - name: wiz
   #   description: ArgoCD Project for wiz security components
   #   namespace: openshift-gitops
