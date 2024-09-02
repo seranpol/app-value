@@ -48,7 +48,8 @@ applications:
   - name: hmo-test-manager1
     environments:
     - 'dev'
-    project: generator-test-project
+    #project: generator-test-project
+    project: default
     destination:
       namespace: cluster-generator-ns
     generatorApplications:
@@ -64,7 +65,8 @@ applications:
   - name: hmo-test-manager2
     environments:
     - 'dev'
-    project: generator-test-project
+    #project: generator-test-project
+    project: default
     destination:
       namespace: cluster-generator-ns
     generatorApplications: 
