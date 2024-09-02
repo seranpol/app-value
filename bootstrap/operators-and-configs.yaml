@@ -45,6 +45,7 @@ applications:
 
 
   # the name of the new app-of-apps application that is generated from the clustergenerator
+clustergenerators:
   - name: hmo-test-manager1
     environments:
     - 'dev'
