@@ -83,6 +83,8 @@ clustergenerators:
       #project: generator-test-project
       project: default
       sources:
-      - path: helm-charts/charts/clustergen-test
-        clusterRepoValuesPath: components/configs/clustergen-test-2/values.yaml
-        targetRevision:  main
+        - chartRepoPath: "https://github.com/seranpol/app-external.git"
+          chartName: external-test
+          clusterRepoValuesPaths:
+          - common-settings/wiz/wiz-sensor/values.yaml
+          - components/configs/wiz/wiz-sensor/values.yaml
