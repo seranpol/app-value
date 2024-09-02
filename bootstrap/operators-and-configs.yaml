@@ -49,42 +49,34 @@ clustergenerators:
   - name: hmo-test-manager1
     environments:
     - 'dev'
-    #project: generator-test-project
-    project: default
+    project: generator-test-project
     destination:
-      namespace: openshift-gitops
-      #namespace: cluster-generator-ns
+      namespace: cluster-generator-ns
     generatorApplications:
     - name: hmo-test-1
-      #project: generator-test-project
-      project: default
+      project: generator-test-project
       destination:
-        #namespace: generator-application-ns
-        namespace: openshift-gitops
+        namespace: generator-application-ns
       sources:
       - path: helm-charts/charts/clustergen-test
         clusterRepoValuesPath: components/configs/clustergen-test-1/values.yaml
         targetRevision:  main
 
-  - name: hmo-test-manager2
-    environments:
-    - 'dev'
-    #project: generator-test-project
-    project: default
-    destination:
-      #namespace: cluster-generator-ns
-      namespace: openshift-gitops
-    generatorApplications: 
-    - name: hmo-test-2
-      destination:
-        #namespace: generator-application-ns
-        #namespace: default
-        namespace: openshift-gitops
-      #project: generator-test-project
-      project: default
-      sources:
-        - chartRepoPath: "https://github.com/seranpol/app-external.git"
-          chartName: app-external/external-cm
-          clusterRepoValuesPaths:
-          - common-settings/wiz/wiz-sensor/values.yaml
-          - components/configs/wiz/wiz-sensor/values.yaml
+  # - name: hmo-test-manager2
+  #   environments:
+  #   - 'dev'
+  #   project: generator-test-project
+  #   destination:
+  #     namespace: cluster-generator-ns
+  #     namespace: openshift-gitops
+  #   generatorApplications: 
+  #   - name: hmo-test-2
+  #     destination:
+  #       namespace: generator-application-ns
+  #     project: generator-test-project
+  #     sources:
+  #       - chartRepoPath: "https://github.com/seranpol/app-external.git"
+  #         chartName: app-external/external-cm
+  #         clusterRepoValuesPaths:
+  #         - common-settings/wiz/wiz-sensor/values.yaml
+  #         - components/configs/wiz/wiz-sensor/values.yaml
