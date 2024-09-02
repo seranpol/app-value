@@ -11,6 +11,16 @@ projects:
       - group: '*'
         kind: '*'
 
+  - name: generator-test-project
+    description: ArgoCD Project for testing
+    namespace: openshift-gitops
+    destinations:
+      - namespace: '*'
+        server: https://kubernetes.default.svc
+    clusterResourceWhitelist:
+      - group: '*'
+        kind: '*'
+
 
 applications:
 
