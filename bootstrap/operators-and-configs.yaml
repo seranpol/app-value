@@ -47,18 +47,19 @@ applications:
   # the name of the new app-of-apps application that is generated from the clustergenerator
   - name: hmo-test-manager1
     environments:
-    - 'foobar'
+    - 'dev'
     #project: generator-test-project
     project: default
     destination:
-      namespace: cluster-generator-ns
+      namespace: openshift-gitops
+      #namespace: cluster-generator-ns
     generatorApplications:
     - name: hmo-test-1
       #project: generator-test-project
       project: default
       destination:
         #namespace: generator-application-ns
-        namespace: default
+        namespace: openshift-gitops
       sources:
       - path: helm-charts/charts/clustergen-test
         clusterRepoValuesPath: components/configs/clustergen-test-1/values.yaml
@@ -66,16 +67,18 @@ applications:
 
   - name: hmo-test-manager2
     environments:
-    - 'foobar'
+    - 'dev'
     #project: generator-test-project
     project: default
     destination:
-      namespace: cluster-generator-ns
+      #namespace: cluster-generator-ns
+      namespace: openshift-gitops
     generatorApplications: 
     - name: hmo-test-2
       destination:
         #namespace: generator-application-ns
-        namespace: default
+        #namespace: default
+        namespace: openshift-gitops
       #project: generator-test-project
       project: default
       sources:
